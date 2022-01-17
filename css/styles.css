@@ -8,18 +8,41 @@
   --second-title-color: #303030;
   --accent-color: #ff6c00;
   --first-text-color: #303030;
+  --hero-margin: 20px;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.list {
+ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.link {
+a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .pre-title {
@@ -39,14 +62,33 @@ body {
   letter-spacing: 0.05em;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 5px solid greenyellow;
+}
+
 /* Header settings */
 
 .header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  background-color: grey;
+  background-color: rgba(99, 86, 86, 0.459); /* ВРЕМЕННО! */
+}
+
+.navigation {
+  display: flex;
+}
+
+.header-list {
+  display: flex;
 }
 
 .header-link {
@@ -71,14 +113,17 @@ body {
 }
 
 .header-btn:hover,
-.header-btn:focus {
-  color: var(--button-first-color);
+.header-btn:focus,
+.header-link-tel:hover,
+.header-link-tel:focus {
+  color: var(--accent-color);
 }
 
 /* Hero section */
 
 .hero {
-  background-color: gray;
+  background-color: rgba(218, 255, 10, 0.616); /* ВРЕМЕННО! */
+  /* Добавить верхний и нижний padding  */
 }
 
 .hero-link {
@@ -96,9 +141,12 @@ body {
 
 .hero-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--hero-margin);
 }
 
 .hero-title {
+  margin-bottom: var(--hero-margin);
+
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 72px;
@@ -116,15 +164,26 @@ body {
 
 /* About section*/
 
+.about {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 .about-pre-title {
+  margin-bottom: var(--hero-margin);
+
   color: var(--second-title-color);
 }
 
 .about-title {
+  margin-bottom: var(--hero-margin);
+
   color: var(--first-text-color);
 }
 
 .about-after-title {
+  margin-bottom: var(--hero-margin);
+
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -132,6 +191,7 @@ body {
 }
 
 .about-text {
+  margin-bottom: 40px;
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
@@ -156,15 +216,24 @@ body {
 /* Prices section */
 
 .prices {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
   background-color: grey;
 }
 
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--hero-margin);
 }
 
 .prices-title {
+  margin-bottom: 44px;
   color: var(--first-title-color);
+}
+
+.prices-list__box {
+  margin-bottom: 50px;
 }
 
 .prices-text {
@@ -192,6 +261,11 @@ body {
 
 /* Reasons section */
 
+.reasons {
+  padding-bottom: 130px;
+  padding-top: 130px;
+}
+
 .reasons-count {
   font-weight: bold;
   font-size: 42px;
@@ -211,10 +285,12 @@ body {
 
 .reasons-pre-title {
   color: var(--second-title-color);
+  margin-bottom: var(--hero-margin);
 }
 
-.resons-title {
+.reasons-title {
   color: var(--second-title-color);
+  margin-bottom: var(--hero-margin);
 }
 
 .reasons-after-title {
@@ -226,15 +302,24 @@ body {
 
 /* Masters section */
 
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 .masters-pre-title {
+  margin-bottom: var(--hero-margin);
   color: var(--second-title-color);
 }
 
 .masters-title {
+  margin-bottom: 44px;
   color: var(--second-title-color);
 }
 
 .masters-item-title {
+  margin-bottom: 8px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: calc(25 / 18);
@@ -251,9 +336,23 @@ body {
   color: var(--accent-color);
 }
 
+.masters-img {
+  margin-bottom: 30px;
+}
+
+.masters-item-box {
+  margin-bottom: 30px;
+}
+
 /* Galery sections  */
 
+.galery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 .galery-pre-title {
+  margin-bottom: 44px;
   color: var(--second-title-color);
 }
 
@@ -268,6 +367,13 @@ body {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+/* Pre-footer section */
+
+.pre-footer {
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 /* Appointment section */
@@ -286,7 +392,12 @@ body {
 }
 
 .contacts-title {
+  margin-bottom: 40px;
   color: var(--first-title-color);
+}
+
+.contacts-list {
+  margin-bottom: 120px;
 }
 
 .contacts-link,
@@ -300,9 +411,23 @@ body {
 
 .contacts-pre-title {
   color: var(--header-text-color);
+  margin-bottom: var(--hero-margin);
 }
 
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
+}
 /* Footer section */
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
 
 .footer-copy {
   font-weight: 600;
