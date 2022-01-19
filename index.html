@@ -22,7 +22,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header-container">
         <nav class="navigation">
           <a href="" class="logo"><img src="./images/logo.svg" alt="логотип сайта" /></a>
           <ul class="header-list">
@@ -40,13 +40,15 @@
             </li>
           </ul>
         </nav>
-        <a href="tel:+380441111111" class="header-link-tel">+38 044 111 11 11</a>
-        <button type="button" class="header-btn">онлайн-запись</button>
+        <div class="header-connect">
+          <a href="tel:+380441111111" class="header-link-tel">+38 044 111 11 11</a>
+          <button type="button" class="header-btn">онлайн-запись</button>
+        </div>
       </div>
     </header>
     <main>
       <section class="hero">
-        <div class="container">
+        <div class="container hero-container">
           <ul class="hero-list">
             <li class="hero-item">
               <a href="" class="hero-link">Instargamm</a>
@@ -55,16 +57,18 @@
               <a href="" class="hero-link">Youtube</a>
             </li>
           </ul>
-          <p lang="en" class="hero-pre-title pre-title">A hair salon for men in Kyiv</p>
-          <h1 lang="en" class="hero-title">BarberShop</h1>
-          <p class="hero-after-title">
-            Мы эксперты в модных мужских стрижках. <br />
-            Работаем быстро, осторожно и со вкусом.
-          </p>
+          <div class="hero-right">
+            <p lang="en" class="hero-pre-title pre-title">A hair salon for men in Kyiv</p>
+            <h1 lang="en" class="hero-title">BarberShop</h1>
+            <p class="hero-after-title">
+              Мы эксперты в модных мужских стрижках. <br />
+              Работаем быстро, осторожно и со вкусом.
+            </p>
+          </div>
         </div>
       </section>
       <section class="about">
-        <div class="container">
+        <div class="container about-container">
           <ul class="about-list">
             <li class="about-item">
               <img
@@ -85,18 +89,20 @@
               />
             </li>
           </ul>
-          <p class="about-pre-title pre-title">О НАС</p>
-          <h2 class="about-title section-title">Лучший Барбершоп твоего города</h2>
-          <p class="about-after-title">
-            Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
-          </p>
-          <p class="about-text">
-            Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда
-            ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда,
-            которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы усовершенствовать
-            каждого, кто к нам приходит!
-          </p>
-          <button type="button" class="about-btn">онлайн-запись</button>
+          <div class="about-description">
+            <p class="about-pre-title pre-title">О НАС</p>
+            <h2 class="about-title section-title">Лучший Барбершоп твоего города</h2>
+            <p class="about-after-title">
+              Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
+            </p>
+            <p class="about-text">
+              Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И
+              когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы
+              команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы
+              усовершенствовать каждого, кто к нам приходит!
+            </p>
+            <button type="button" class="about-btn">онлайн-запись</button>
+          </div>
         </div>
       </section>
       <section class="prices">
@@ -218,15 +224,90 @@
                 <p class="masters-item-text">Extreme Barber</p>
               </div>
             </li>
+            <li class="masters-item">
+              <img
+                src="./images/img-master-1.jpg"
+                alt="Мастер Джон стрижет клиента"
+                width="370"
+                height="346"
+                class="masters-img"
+              />
+              <div class="masters-item-box">
+                <h3 lang="en" class="masters-item-title">John Smith</h3>
+                <p class="masters-item-text">Extreme Barber</p>
+              </div>
+            </li>
+            <li class="masters-item">
+              <img
+                src="./images/img-master-2.jpg"
+                alt="Мастер Мишель стрижет клиента"
+                width="370"
+                height="346"
+                class="masters-img"
+              />
+              <div class="masters-item-box">
+                <h3 lang="en" class="masters-item-title">Michele Doe</h3>
+                <p class="masters-item-text">Extreme Barber</p>
+              </div>
+            </li>
+            <li class="masters-item">
+              <img
+                src="./images/img-master-3.jpg"
+                alt="Мастер Алан стрижет клиента"
+                width="370"
+                height="346"
+                class="masters-img"
+              />
+              <div class="masters-item-box">
+                <h3 lang="en" class="masters-item-title">Alan Black</h3>
+                <p class="masters-item-text">Extreme Barber</p>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
       <section class="galery">
         <div class="container">
           <p class="galery-pre-title pre-title">На латинском языке “барба” означает “борода”</p>
-          <!-- Скрытый заголовок - переделать через css-->
+          <!-- Скрытый заголовок-->
           <h2 class="visually-hidden">Галерея</h2>
           <ul class="galery-list">
+            <li class="galery-item">
+              <img
+                src="./images/img-galery-1.jpg"
+                alt="Мастер за работой 1"
+                width="270"
+                height="360"
+                class="galery-img"
+              />
+            </li>
+            <li class="galery-item">
+              <img
+                src="./images/img-galery-2.jpg"
+                alt="Мастер за работой 2"
+                width="270"
+                height="360"
+                class="galery-img"
+              />
+            </li>
+            <li class="galery-item">
+              <img
+                src="./images/img-galery-3.jpg"
+                alt="Мастер за работой 3"
+                width="270"
+                height="360"
+                class="galery-img"
+              />
+            </li>
+            <li class="galery-item">
+              <img
+                src="./images/img-galery-4.jpg"
+                alt="Мастер за работой 4"
+                width="270"
+                height="360"
+                class="galery-img"
+              />
+            </li>
             <li class="galery-item">
               <img
                 src="./images/img-galery-1.jpg"
