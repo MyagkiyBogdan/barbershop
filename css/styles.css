@@ -107,6 +107,8 @@ img {
 
 .header-link {
   color: var(--header-text-color);
+  padding: 48px 0;
+  display: block;
 }
 
 .logo {
@@ -315,6 +317,13 @@ img {
   text-transform: uppercase;
   color: var(--button-first-color);
   background-color: transparent;
+
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  min-width: 160px;
+  min-height: 40px;
+  margin: 0 auto;
+  display: block;
 }
 
 .prices-btn:hover,
@@ -470,19 +479,55 @@ img {
   padding-bottom: 130px;
 }
 
+.pre-footer-container {
+  display: flex;
+}
+
 /* Appointment section */
 
 .online-appointment {
   background-color: grey;
+  flex-basis: 50%;
 }
 
 .online-appointment-title {
   color: var(--first-title-color);
+  margin-left: 55px;
+}
+
+.online-appointment-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--button-first-color);
+  background-color: transparent;
+
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  min-width: 160px;
+  min-height: 40px;
+
+  margin-top: 44px;
+  margin-left: 55px;
+}
+
+.online-appointment-btn:focus,
+.online-appointment-btn:hover {
+  color: var(--accent-color);
 }
 
 /* Contacts-section */
 .contacts {
   background-color: gray;
+  outline: solid greenyellow 2px;
+  flex-basis: 50%;
+}
+
+.contacts-wrapper {
+  margin-left: 100px;
 }
 
 .contacts-title {
@@ -503,9 +548,19 @@ img {
   color: #9da4bd;
 }
 
+.contacts-link-mail {
+  text-decoration: underline;
+}
+
 .contacts-pre-title {
   color: var(--header-text-color);
   margin-bottom: var(--hero-margin);
+}
+
+.contacts-pre-title::before {
+  content: '-----';
+  font-size: 30px;
+  color: #9da4bd;
 }
 
 .contacts-item:not(:last-child) {
@@ -523,6 +578,33 @@ img {
   padding-bottom: 56px;
 }
 
+.footer-container {
+  display: flex;
+  align-items: center;
+  border: 3px red solid;
+}
+
+.footer-copy {
+  margin-left: 40px;
+}
+
+.footer-list {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.footer-list::before {
+  content: '-----';
+  font-size: 30px;
+  color: #303030;
+}
+
+.footer-item + .footer-item {
+  margin-left: 40px;
+}
+
 .footer-copy {
   font-weight: 600;
   font-size: 11px;
@@ -537,6 +619,8 @@ img {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: var(--first-text-color);
+  padding: 56px 0;
+  display: block;
 }
 
 .footer-link:hover,
