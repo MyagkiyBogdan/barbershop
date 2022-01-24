@@ -160,7 +160,7 @@ img {
   flex-grow: 1;
   padding: 272px 0 206px 96px;
   background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-    url(..//images/hero-bg-1.jpg);
+    url(../images/hero-bg-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   block-size: cover;
