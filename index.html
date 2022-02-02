@@ -27,7 +27,7 @@
           <a href="" class="logo"><img src="./images/logo.svg" alt="логотип сайта" /></a>
           <ul class="header-list">
             <li class="header-item">
-              <a href="" class="header-link">О нас</a>
+              <a href="" class="header-link current">О нас</a>
             </li>
             <li class="header-item">
               <a href="" class="header-link">Услуги и цены</a>
@@ -42,21 +42,24 @@
         </nav>
         <div class="header-connect">
           <a href="tel:+380441111111" class="header-link-tel">+38 044 111 11 11</a>
-          <button type="button" class="header-btn">онлайн-запись</button>
+          <button type="button" class="header-btn btn" data-modal-open>онлайн-запись</button>
         </div>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list">
-            <li class="hero-item">
-              <a href="" class="hero-link">Instargamm</a>
-            </li>
-            <li class="hero-item">
-              <a href="" class="hero-link">Youtube</a>
-            </li>
-          </ul>
+          <div class="hero-left">
+            <ul class="hero-list">
+              <li class="hero-item">
+                <a href="" class="hero-link">Instagramm</a>
+              </li>
+              <li class="hero-item">
+                <a href="" class="hero-link">Youtube</a>
+              </li>
+            </ul>
+          </div>
+
           <div class="hero-right">
             <p lang="en" class="hero-pre-title pre-title pre-title-light">
               A hair salon for men in Kyiv
@@ -103,7 +106,7 @@
               команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button type="button" class="about-btn">онлайн-запись</button>
+            <button type="button" class="about-btn btn">онлайн-запись</button>
           </div>
         </div>
       </section>
@@ -151,29 +154,31 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="prices-btn">онлайн-запись</button>
+          <button type="button" class="prices-btn btn">онлайн-запись</button>
         </div>
       </section>
       <section class="reasons">
-        <div class="container">
-          <ul class="reasons-list">
-            <li class="reasons-item">
-              <span class="reasons-count">600</span>
-              <p class="reasons-item-text">Довольных клиентов в день</p>
-            </li>
-            <li class="reasons-item">
-              <span class="reasons-count">50</span>
-              <p class="reasons-item-text">Наград за отличный сервис</p>
-            </li>
-            <li class="reasons-item">
-              <span class="reasons-count">20</span>
-              <p class="reasons-item-text">Лучших мастеров Киева</p>
-            </li>
-            <li class="reasons-item">
-              <span class="reasons-count">100</span>
-              <p class="reasons-item-text">Подарков постоянным клиентам</p>
-            </li>
-          </ul>
+        <div class="container reasons-container">
+          <div class="reasons-wrap-left">
+            <ul class="reasons-list">
+              <li class="reasons-item">
+                <span class="reasons-count">600</span>
+                <p class="reasons-item-text">Довольных клиентов в день</p>
+              </li>
+              <li class="reasons-item">
+                <span class="reasons-count">50</span>
+                <p class="reasons-item-text">Наград за отличный сервис</p>
+              </li>
+              <li class="reasons-item">
+                <span class="reasons-count">20</span>
+                <p class="reasons-item-text">Лучших мастеров Киева</p>
+              </li>
+              <li class="reasons-item reasons-item-different">
+                <span class="reasons-count">100</span>
+                <p class="reasons-item-text">Подарков постоянным клиентам</p>
+              </li>
+            </ul>
+          </div>
           <div class="reasons-box">
             <p class="reasons-pre-title pre-title pre-title-dark">старая традиционная школа</p>
             <h2 class="reasons-title section-title">Почему приходят именно к нам?</h2>
@@ -192,13 +197,22 @@
           <h2 class="masters-title section-title">Наши мастера</h2>
           <ul class="masters-list">
             <li class="masters-item">
-              <img
-                src="./images/img-master-1.jpg"
-                alt="Мастер Джон стрижет клиента"
-                width="370"
-                height="346"
-                class="masters-img"
-              />
+              <div class="masters-wrap">
+                <img
+                  src="./images/img-master-1.jpg"
+                  alt="Мастер Джон стрижет клиента"
+                  width="370"
+                  height="346"
+                  class="masters-img"
+                />
+                <p class="masters-top-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, minus
+                  exercitationem fuga facilis alias ullam, numquam repudiandae quod accusantium in
+                  sit iusto nostrum fugiat nulla consequuntur iure quae fugit aliquam eaque id sint
+                  officia labore incidunt. Maiores libero tempore reiciendis fuga sunt laudantium
+                  illo fugit quaerat quo, consectetur ea odit?
+                </p>
+              </div>
               <div class="masters-item-box">
                 <h3 lang="en" class="masters-item-title">John Smith</h3>
                 <p class="masters-item-text">Extreme Barber</p>
@@ -449,7 +463,7 @@
         <div class="container pre-footer-container">
           <section class="online-appointment">
             <h2 class="online-appointment-title section-title">Онлайн-запись</h2>
-            <button type="submit" class="online-appointment-btn">отправить</button>
+            <button type="submit" class="online-appointment-btn btn">отправить</button>
           </section>
           <section class="contacts">
             <div class="contacts-wrapper">
@@ -485,7 +499,7 @@
     </main>
     <footer class="footer">
       <div class="container footer-container">
-        <p class="footer-copy">&copy; Copyright 2020</p>
+        <p class="footer-copy">&copy; Copyright 2022</p>
         <ul class="footer-list">
           <li class="footer-item">
             <a href="" class="footer-link">Instagram</a>
@@ -496,5 +510,15 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg width="20" height="20">
+            <use href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
