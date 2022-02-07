@@ -517,6 +517,65 @@
             <use href="./images/icons.svg#icon-modal-close"></use>
           </svg>
         </button>
+        <p class="modal__title">Запишись на стрижку!</p>
+        <form class="input-form">
+          <div class="input-form__field" role="group">
+            <label for="user-name" class="modal__label">Введите Имя</label>
+            <input
+              type="text"
+              class="input-form__input"
+              placeholder="Alex Alexandrov"
+              name="modal_name"
+              required
+              id="user-name"
+            />
+            <label for="user-tel" class="modal__label">Введите телефон</label>
+            <input
+              type="tel"
+              class="input-form__input"
+              placeholder="+380501111111"
+              name="modal_phone"
+              required
+              id="user-tel"
+            />
+            <label for="user-mail" class="modal__label">Введите почту</label>
+            <input
+              type="email"
+              class="input-form__input"
+              placeholder="me@gmail.com"
+              name="modal_mail"
+              id="use-mail"
+            />
+          </div>
+          <div class="input-form__field" role="group">
+            <label for="user-comment" class="modal__label">Введите комментарий</label>
+            <textarea
+              name="modal__comment"
+              id="user-comment"
+              class="input-form__comment"
+              placeholder="Хочу крутую бороду!"
+            ></textarea>
+          </div>
+          <h2 class="modal__title">Что стрижем?</h2>
+          <div class="input-form__field input-form__field--radio" role="group">
+            <div class="input-form__box">
+              <label for="haircut" class="modal__label">Только стрижка</label>
+              <input type="radio" name="beard" id="haircut" />
+            </div>
+
+            <div class="input-form__box">
+              <label for="beard" class="modal__label">Только борода</label>
+              <input type="radio" name="beard" id="beard" />
+            </div>
+
+            <div class="input-form__box">
+              <label for="beard-haircut" class="modal__label">Cтрижка и борода</label>
+              <input type="radio" name="beard" id="beard-haircut" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn--modal">отправить</button>
+          <button type="reset" class="btn btn--modal">сборосить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
