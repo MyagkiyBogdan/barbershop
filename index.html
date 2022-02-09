@@ -463,7 +463,26 @@
         <div class="container pre-footer-container">
           <section class="online-appointment">
             <h2 class="online-appointment-title section-title">Онлайн-запись</h2>
-            <button type="submit" class="online-appointment-btn btn">отправить</button>
+            <form class="online-form">
+              <div class="online-wrap">
+                <input
+                  type="text"
+                  name="appointment-name"
+                  class="online-form__input online-form__input--long"
+                  id="app-input_name"
+                  placeholder="Имя*"
+                />
+                <input
+                  type="tel"
+                  name="appointment-tel"
+                  class="online-form__input"
+                  id="app-input_tel"
+                  placeholder="Телефон*"
+                />
+              </div>
+              <textarea name="" id="" class="online-form__text" placeholder="сообщение"></textarea>
+              <button type="submit" class="online-appointment-btn btn">отправить</button>
+            </form>
           </section>
           <section class="contacts">
             <div class="contacts-wrapper">
@@ -521,31 +540,46 @@
         <form class="input-form">
           <div class="input-form__field" role="group">
             <label for="user-name" class="modal__label">Введите Имя</label>
-            <input
-              type="text"
-              class="input-form__input"
-              placeholder="Alex Alexandrov"
-              name="modal_name"
-              required
-              id="user-name"
-            />
+            <div class="input-form__wrap">
+              <input
+                type="text"
+                class="input-form__input"
+                placeholder="Alex Alexandrov"
+                name="modal_name"
+                required
+                id="user-name"
+              />
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#icon-name-modal"></use>
+              </svg>
+            </div>
             <label for="user-tel" class="modal__label">Введите телефон</label>
-            <input
-              type="tel"
-              class="input-form__input"
-              placeholder="+380501111111"
-              name="modal_phone"
-              required
-              id="user-tel"
-            />
+            <div class="input-form__wrap">
+              <input
+                type="tel"
+                class="input-form__input"
+                placeholder="+380501111111"
+                name="modal_phone"
+                required
+                id="user-tel"
+              />
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#icon-phone-modal"></use>
+              </svg>
+            </div>
             <label for="user-mail" class="modal__label">Введите почту</label>
-            <input
-              type="email"
-              class="input-form__input"
-              placeholder="me@gmail.com"
-              name="modal_mail"
-              id="use-mail"
-            />
+            <div class="input-form__wrap">
+              <input
+                type="email"
+                class="input-form__input"
+                placeholder="me@gmail.com"
+                name="modal_mail"
+                id="use-mail"
+              />
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#icon-mail-modal"></use>
+              </svg>
+            </div>
           </div>
           <div class="input-form__field" role="group">
             <label for="user-comment" class="modal__label">Введите комментарий</label>
@@ -559,18 +593,35 @@
           <h2 class="modal__title">Что стрижем?</h2>
           <div class="input-form__field input-form__field--radio" role="group">
             <div class="input-form__box">
-              <label for="haircut" class="modal__label">Только стрижка</label>
-              <input type="radio" name="beard" id="haircut" />
+              <input
+                type="radio"
+                name="beard"
+                id="haircut"
+                class="modal__radio-btn visually-hidden"
+              />
+              <label for="haircut" class="modal__label modal__label--after">Только стрижка</label>
             </div>
 
             <div class="input-form__box">
-              <label for="beard" class="modal__label">Только борода</label>
-              <input type="radio" name="beard" id="beard" />
+              <input
+                type="radio"
+                name="beard"
+                id="beard"
+                class="modal__radio-btn visually-hidden"
+              />
+              <label for="beard" class="modal__label modal__label--after">Только борода</label>
             </div>
 
             <div class="input-form__box">
-              <label for="beard-haircut" class="modal__label">Cтрижка и борода</label>
-              <input type="radio" name="beard" id="beard-haircut" />
+              <input
+                type="radio"
+                name="beard"
+                id="beard-haircut"
+                class="modal__radio-btn visually-hidden"
+              />
+              <label for="beard-haircut" class="modal__label modal__label--after"
+                >Стрижем все!</label
+              >
             </div>
           </div>
           <button type="submit" class="btn btn--modal">отправить</button>
