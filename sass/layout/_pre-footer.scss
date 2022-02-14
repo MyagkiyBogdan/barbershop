@@ -1,0 +1,13 @@
+.pre-footer {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-color: #191c26;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(100% / 2 - 15px);
+}
+
+.pre-footer-container {
+  display: flex;
+}

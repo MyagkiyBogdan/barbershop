@@ -1,0 +1,72 @@
+.about {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.about-list {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.about-item + .about-item {
+  margin-left: 30px;
+}
+
+.about-container {
+  display: flex;
+}
+
+.about-description {
+  /* flex-basis: 480px; Альтернатива flex-shrink:0 для about-list; */
+  margin-left: 64px;
+}
+
+.about-pre-title {
+  margin-bottom: var(--hero-margin);
+
+  color: var(--second-title-color);
+}
+
+.about-title {
+  margin-bottom: var(--hero-margin);
+
+  color: var(--first-text-color);
+}
+
+.about-after-title {
+  margin-bottom: var(--hero-margin);
+
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.about-text {
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.about-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--button-second-color);
+
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  min-width: 160px;
+  min-height: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--button-first-color);
+  }
+}

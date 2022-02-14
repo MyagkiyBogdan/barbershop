@@ -1,0 +1,74 @@
+.reasons {
+  padding-bottom: 130px;
+  padding-top: 130px;
+}
+
+.reasons-count {
+  display: block;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.35;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--first-text-color);
+}
+
+.reasons-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+}
+
+.reasons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reasons-wrap-left,
+.reasons-box {
+  width: calc((100%-30px) / 2);
+}
+
+.reasons-item {
+  width: 170px;
+  height: 133px;
+  background-color: #f7f7f7;
+  padding: 20px 24px;
+}
+
+.reasons-item-different {
+  padding: 20px;
+}
+
+.reasons-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  color: var(--first-text-color);
+}
+
+.reasons-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.reasons-item:nth-child(even) {
+  margin-top: 30px;
+}
+
+.reasons-pre-title {
+  color: var(--second-title-color);
+  margin-bottom: var(--hero-margin);
+}
+
+.reasons-title {
+  color: var(--second-title-color);
+  margin-bottom: var(--hero-margin);
+}
+
+.reasons-after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
