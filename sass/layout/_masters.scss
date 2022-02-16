@@ -11,7 +11,7 @@
   flex-wrap: wrap;
 }
 
-.masters-item {
+.masters-list__item {
   /* flex-basis: calc(100% / 3 - 30px); более простой вариант*/
   flex-basis: calc((100% - 3 * 30px) / 3);
   margin-left: 30px;
@@ -23,12 +23,12 @@
   margin-left: 30px;
 } */
 
-.masters-wrap {
+.masters-list__wrap {
   position: relative;
   overflow: hidden;
 }
 
-.masters-top-text {
+.masters-list__top-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,21 +43,21 @@
   transition: transform 300ms linear;
 }
 
-.masters-item:hover .masters-top-text {
+.masters-list__item:hover .masters-list__top-text {
   transform: translateY(0);
 }
 
-.masters-pre-title {
+.masters__pre-title {
   margin-bottom: var(--hero-margin);
   color: var(--second-title-color);
 }
 
-.masters-title {
+.masters__title {
   margin-bottom: 44px;
   color: var(--second-title-color);
 }
 
-.masters-item-title {
+.masters-list__item-title {
   margin-bottom: 8px;
   margin-top: 30px;
   font-weight: 400;
@@ -68,7 +68,7 @@
   color: var(--second-title-color);
 }
 
-.masters-item-text {
+.masters-list__item-text {
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
@@ -77,38 +77,36 @@
   margin-bottom: 30px;
 }
 
-.masters-item-box {
+.masters-list__item-box {
   margin-bottom: 30px;
 }
 
-.masters-socials-list {
-  display: flex;
-  justify-content: center;
+.socials {
+  @extend %flex-jcc;
 }
 
-.masters-socials-item + .masters-socials-item {
+.socials__item + .socials__item {
   margin-left: 10px;
 }
 
-.masters-socials-link {
+.socials__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--button-first-color);
 
-  display: flex;
-  justify-content: center;
+  @extend %flex-jcc;
   align-items: center;
   color: #000000;
 }
 
-.masters-socials-link:hover,
-.masters-socials-link:focus {
+.socials__link:hover,
+.socials__link:focus {
   background-color: var(--button-first-color);
   color: var(--accent-color);
 }
 
-.masters-socials-icon {
+.socials__icon {
   fill: currentColor;
 }
 

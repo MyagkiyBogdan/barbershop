@@ -36,9 +36,9 @@
   border-color: #999999;
   background-color: transparent;
 
-  display: flex;
-  justify-content: center;
+  @extend %flex-jcc;
   align-items: center;
+
   transition: background-color 500ms linear, fill 500ms linear, box-shadow 500ms linear,
     border-color 500ms linear;
 
@@ -169,8 +169,7 @@
 }
 
 .input-form__field--radio {
-  display: flex;
-  justify-content: center;
+  @extend %flex-jcc;
   margin-bottom: 30px;
 }
 

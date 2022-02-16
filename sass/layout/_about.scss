@@ -8,32 +8,32 @@
   flex-shrink: 0;
 }
 
-.about-item + .about-item {
+.about-list__item + .about-list__item {
   margin-left: 30px;
 }
 
-.about-container {
+.about__container {
   display: flex;
 }
 
-.about-description {
+.about__description {
   /* flex-basis: 480px; Альтернатива flex-shrink:0 для about-list; */
   margin-left: 64px;
 }
 
-.about-pre-title {
+.about-wrap__pre-title {
   margin-bottom: var(--hero-margin);
 
   color: var(--second-title-color);
 }
 
-.about-title {
+.about-wrap__title {
   margin-bottom: var(--hero-margin);
 
   color: var(--first-text-color);
 }
 
-.about-after-title {
+.about-wrap__after-title {
   margin-bottom: var(--hero-margin);
 
   font-size: 18px;
@@ -42,7 +42,7 @@
   color: #555555;
 }
 
-.about-text {
+.about-wrap__text {
   margin-bottom: 40px;
   font-size: 14px;
   line-height: 1.86;
@@ -50,7 +50,7 @@
   color: #555555;
 }
 
-.about-btn {
+.about__btn {
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;

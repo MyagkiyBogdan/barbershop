@@ -1,4 +1,4 @@
-.hero-right {
+.hero-content {
   flex-grow: 1;
   padding: 272px 0 206px 96px;
   background-color: rgb(31, 29, 29);
@@ -9,7 +9,7 @@
   background-size: cover;
 }
 
-.hero-left {
+.hero-soc {
   display: flex;
   align-items: flex-end;
   padding-left: 23px;
@@ -17,7 +17,7 @@
   width: 93px;
 }
 
-.hero-list {
+.soc-list {
   /* потом поставить ширину */
 
   display: flex;
@@ -27,7 +27,7 @@
   transform-origin: top left;
 }
 
-.hero-list::before {
+.soc-list::before {
   display: block;
   content: '';
   margin-right: 40px;
@@ -39,7 +39,7 @@
   /* shrink что бы при 93px контент не ужимался до контента  */
 }
 
-.hero-link {
+.soc-list__link {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -47,21 +47,21 @@
   color: var(--first-text-color);
 }
 
-.hero-item + .hero-item {
+.soc-list__item + .soc-list__item {
   margin-left: 40px;
 }
 
-.hero-link:hover,
-.hero-link:focus {
+.soc-list__link:hover,
+.soc-list__link:focus {
   color: var(--accent-color);
 }
 
-.hero-pre-title {
+.hero-content__pre-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: var(--hero-margin);
 }
 
-.hero-title {
+.hero-content__title {
   margin-bottom: var(--hero-margin);
 
   font-family: 'Raleway', sans-serif;
@@ -72,7 +72,7 @@
   color: #ffffff;
 }
 
-.hero-after-title {
+.hero-content__after-title {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
