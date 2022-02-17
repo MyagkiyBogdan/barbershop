@@ -5,6 +5,20 @@
   padding-right: 15px;
 }
 
-.hero-container {
+.hero__container {
   display: flex;
+}
+
+.container__reasons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__pre-footer {
+  display: flex;
+}
+
+.container__footer {
+  display: flex;
+  align-items: center;
 }

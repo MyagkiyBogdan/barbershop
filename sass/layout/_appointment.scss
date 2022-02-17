@@ -3,12 +3,12 @@
   padding-right: 40px;
 }
 
-.online-appointment-title {
+.online-appointment__title {
   color: var(--first-title-color);
   margin-bottom: 55px;
 }
 
-.online-wrap {
+.online-form__wrap {
   display: flex;
   justify-content: space-between;
   margin-bottom: 23px;
@@ -33,32 +33,16 @@
   &:focus {
     border-color: #ffffff;
   }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: #ffffff;
+    transition: color 500ms linear;
+  }
 }
 
 .online-form__input--long {
   width: 270px;
-}
-
-.online-appointment-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--button-first-color);
-  background-color: transparent;
-
-  border: 1px solid var(--accent-color);
-  border-radius: 25px;
-  min-width: 160px;
-  min-height: 40px;
-
-  &:focus,
-  &:hover {
-    background-color: var(--accent-color);
-    color: var(--button-first-color);
-  }
 }
 
 .online-form__text {
@@ -83,19 +67,32 @@
   &:focus {
     border-color: #ffffff;
   }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: #ffffff;
+    transition: color 500ms linear;
+  }
 }
 
-.online-form__input:hover::placeholder,
-.online-form__input:focus::placeholder,
-.online-form__text:hover::placeholder,
-.online-form__text:focus::placeholder {
-  color: rgba(157, 164, 189, 0.4);
-  transition: color 500ms linear;
-}
+.online-appointment__btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--button-first-color);
+  background-color: transparent;
 
-.online-form__input:hover::placeholder,
-.online-form__input:focus::placeholder,
-.online-form__text:hover::placeholder,
-.online-form__text:focus::placeholder {
-  color: #ffffff;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  min-width: 160px;
+  min-height: 40px;
+
+  &:focus,
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--button-first-color);
+  }
 }
