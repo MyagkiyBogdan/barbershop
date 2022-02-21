@@ -1,15 +1,22 @@
 .masters-list {
-  display: flex;
-  margin-left: -30px;
   margin-bottom: -30px;
-  flex-wrap: wrap;
+
+  @media screen and (min-width: 720px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
 }
 
 .masters-list__item {
   /* flex-basis: calc(100% / 3 - 30px); более простой вариант*/
-  flex-basis: calc((100% - 3 * 30px) / 3);
-  margin-left: 30px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-right: 30px;
+  }
 }
 
 /*  не работает с calc выше
@@ -44,11 +51,21 @@
 .masters__pre-title {
   margin-bottom: var(--hero-margin);
   color: var(--second-title-color);
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: start;
+  }
 }
 
 .masters__title {
   margin-bottom: 44px;
   color: var(--second-title-color);
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+
+  text-align: center;
 }
 
 .masters-list__item-title {
