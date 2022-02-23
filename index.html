@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a href="" class="logo"><img src="./images/logo.svg" alt="логотип сайта" /></a>
@@ -39,10 +39,48 @@
             онлайн-запись
           </button>
         </div>
+        <button type="button" class="menu-open-btn">B</button>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <div class="container mob-menu__container">
+          <div class="mob-menu-wrapper-top">
+            <button type="button" class="mob-close-btn">X</button>
+            <ul class="mob-list">
+              <li class="mob-list__item">
+                <a href="" class="mob-list__link">О нас</a>
+              </li>
+              <li class="mob-list__item">
+                <a href="" class="mob-list__link">Услуги и цены</a>
+              </li>
+              <li class="mob-list__item">
+                <a href="#masters" class="mob-list__link">Мастера</a>
+              </li>
+              <li class="mob-list__item">
+                <a href="" class="mob-list__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-wrapper-bottom">
+            <div class="mob-connect">
+              <a href="tel:+380441111111" class="mob-connect__tel">+38 044 111 11 11</a>
+              <button type="button" class="mob-connect__btn btn" data-modal-open>
+                онлайн-запись
+              </button>
+            </div>
+            <ul class="mob-soc-list">
+              <li class="mob-soc-list__item">
+                <a href="#" class="mob-soc-list__link">Instagramm</a>
+              </li>
+              <li class="mob-soc-list__item">
+                <a href="#" class="mob-soc-list__link">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container hero__container">
           <div class="hero-soc">
             <ul class="soc-list">
@@ -61,12 +99,11 @@
             </p>
             <h1 lang="en" class="hero-content__title">BarberShop</h1>
             <p class="hero-content__after-title">
-              Мы эксперты в модных мужских стрижках. <br />
-              Работаем быстро, осторожно и со вкусом.
+              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
             </p>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- About section -->
       <!-- <section class="section">
         <div class="container about__container">
@@ -155,7 +192,7 @@
         </div>
       </section>
       <!-- Reasons section -->
-      <section class="section">
+      <!-- <section class="section">
         <div class="container container__reasons">
           <div class="reasons-list__wrap">
             <ul class="reasons-list">
@@ -188,7 +225,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="section__masters section" id="masters">
         <div class="container">
           <p class="masters__pre-title pre-title pre-title--dark">
@@ -365,76 +402,112 @@
           <h2 class="visually-hidden">Галерея</h2>
           <ul class="galery-list">
             <li class="galery-list__item">
-              <img
-                src="./images/img-galery-1.jpg"
-                alt="Мастер за работой 1"
-                width="270"
-                height="360"
-                class="galery-list__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/galery-1-desk-1x-min.jpg 1x,
+                    ./images/galery-1-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/galery-1-tablet-1x-min.jpg 1x,
+                    ./images/galery-1-tablet-2x-min.jpg 2x
+                  "
+                  media="(min-width: 720px)"
+                />
+                <source
+                  srcset="./images/galery-1-mob-1x-min.jpg 1x, ./images/galery-1-mob-2x-min.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/galery-3-mob-1x-min.jpg"
+                  alt="Мастер за работой 1"
+                  class="galery-list__img"
+                />
+              </picture>
             </li>
             <li class="galery-list__item">
-              <img
-                src="./images/img-galery-2.jpg"
-                alt="Мастер за работой 2"
-                width="270"
-                height="360"
-                class="galery-list__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/galery-2-desk-1x-min.jpg 1x,
+                    ./images/galery-2-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/galery-2-tablet-1x-min.jpg 1x,
+                    ./images/galery-2-tablet-2x-min.jpg 2x
+                  "
+                  media="(min-width: 720px)"
+                />
+                <source
+                  srcset="./images/galery-2-mob-1x-min.jpg 1x, ./images/galery-2-mob-2x-min.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/galery-2-mob-1x-min.jpg"
+                  alt="Мастер за работой 2"
+                  class="galery-list__img"
+                />
+              </picture>
             </li>
             <li class="galery-list__item">
-              <img
-                src="./images/img-galery-3.jpg"
-                alt="Мастер за работой 3"
-                width="270"
-                height="360"
-                class="galery-list__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/galery-3-desk-1x-min.jpg 1x,
+                    ./images/galery-3-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/galery-3-tablet-1x-min.jpg 1x,
+                    ./images/galery-3-tablet-2x-min.jpg 2x
+                  "
+                  media="(min-width: 720px)"
+                />
+                <source
+                  srcset="./images/galery-3-mob-1x-min.jpg 1x, ./images/galery-3-mob-2x-min.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/galery-3-mob-1x-min.jpg"
+                  alt="Мастер за работой 4"
+                  class="galery-list__img"
+                />
+              </picture>
             </li>
             <li class="galery-list__item">
-              <img
-                src="./images/img-galery-4.jpg"
-                alt="Мастер за работой 4"
-                width="270"
-                height="360"
-                class="galery-list__img"
-              />
-            </li>
-            <li class="galery-list__item">
-              <img
-                src="./images/img-galery-1.jpg"
-                alt="Мастер за работой 1"
-                width="270"
-                height="360"
-                class="galery-list__img"
-              />
-            </li>
-            <li class="galery-list__item">
-              <img
-                src="./images/img-galery-2.jpg"
-                alt="Мастер за работой 2"
-                width="270"
-                height="360"
-                class="galery-list__img"
-              />
-            </li>
-            <li class="galery-list__item">
-              <img
-                src="./images/img-galery-3.jpg"
-                alt="Мастер за работой 3"
-                width="270"
-                height="360"
-                class="galery-list__img"
-              />
-            </li>
-            <li class="galery-list__item">
-              <img
-                src="./images/img-galery-4.jpg"
-                alt="Мастер за работой 4"
-                width="270"
-                height="360"
-                class="galery-list__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/galery-4-desk-1x-min.jpg 1x,
+                    ./images/galery-4-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/galery-4-tablet-1x-min.jpg 1x,
+                    ./images/galery-4-tablet-2x-min.jpg 2x
+                  "
+                  media="(min-width: 720px)"
+                />
+                <source
+                  srcset="./images/galery-4-mob-1x-min.jpg 1x, ./images/galery-4-mob-2x-min.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/galery-4-mob-1x-min.jpg"
+                  alt="Мастер за работой 3"
+                  class="galery-list__img"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -615,6 +688,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
