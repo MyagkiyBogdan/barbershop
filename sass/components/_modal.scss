@@ -198,3 +198,9 @@
     background-repeat: no-repeat;
   }
 }
+
+.fixedBody {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}

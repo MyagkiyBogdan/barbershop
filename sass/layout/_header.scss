@@ -19,12 +19,15 @@
 
 .header__container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .nav-list {
   display: none;
-  // display: flex;
+  @include tab {
+    display: flex;
+  }
 }
 
 .nav-list__item + .nav-list__item {
@@ -33,7 +36,10 @@
 
 .header-connect {
   display: none;
-  // margin-left: auto;
+  @include tab {
+    display: block;
+    margin-left: auto;
+  }
 }
 
 .nav-list__link {
@@ -86,13 +92,6 @@
   }
 }
 
-.menu-open-btn {
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin-left: auto;
-}
-
 .mob-menu {
   position: fixed;
   z-index: 1;
@@ -101,19 +100,60 @@
   height: 100vh;
   overflow: auto;
   top: 0;
-  left: 0;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  right: 0;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  padding-left: 50px;
+  padding-right: 10px;
+
+  @include tab {
+    display: none;
+  }
 }
 
-.mob-close-btn {
+.mobile-btn {
+  position: relative;
+  z-index: 9999;
   display: block;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-left: auto;
-  margin-bottom: 30px;
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  fill: var(--accent-color);
+  // ^^^^Color
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
+
+.mobile-btn__burger {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .mobile-btn.is-open & {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.mobile-btn__close {
+  opacity: 0;
+  visibility: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .mobile-btn.is-open & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-btn:hover &,
+  .mobile-btn:focus & {
+    fill: currentColor;
+  }
+}
+// new end
 
 .mob-list__item,
 .mob-soc-list__item {
@@ -133,6 +173,11 @@
   line-height: 1.38;
   letter-spacing: 0.1em;
   color: #303030;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .mob-connect__tel {
@@ -146,4 +191,5 @@
   line-height: 1.35;
   letter-spacing: 0.2em;
   color: #303030;
+  text-transform: none;
 }

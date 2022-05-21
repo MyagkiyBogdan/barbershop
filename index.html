@@ -39,12 +39,25 @@
             онлайн-запись
           </button>
         </div>
-        <button type="button" class="menu-open-btn">B</button>
+
+       <button
+          type="button"
+          class="mobile-btn"
+          aria-label="Переключать мобильного меню"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg width="24" height="24">
+            <use class="mobile-btn__burger" href="./images/icons.svg#icon-burger"></use>
+            <use class="mobile-btn__close" href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+
       </div>
-      <div class="mob-menu">
+      <div class="mob-menu is-hidden" data-menu>
         <div class="container mob-menu__container">
           <div class="mob-menu-wrapper-top">
-            <button type="button" class="mob-close-btn">X</button>
+
+
             <ul class="mob-list">
               <li class="mob-list__item">
                 <a href="" class="mob-list__link">О нас</a>
@@ -69,10 +82,10 @@
             </div>
             <ul class="mob-soc-list">
               <li class="mob-soc-list__item">
-                <a href="#" class="mob-soc-list__link">Instagramm</a>
+                <a href="#" class="mob-soc-list__link pre-title pre-title--dark">Instagramm</a>
               </li>
               <li class="mob-soc-list__item">
-                <a href="#" class="mob-soc-list__link">Youtube</a>
+                <a href="#" class="mob-soc-list__link pre-title">Youtube</a>
               </li>
             </ul>
           </div>
@@ -139,7 +152,7 @@
               команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button type="button" class="about__btn btn">онлайн-запись</button>
+            <button type="button" class="about__btn btn" data-modal-open>онлайн-запись</button>
           </div>
         </div>
       </section> -->
@@ -188,7 +201,7 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="prices__btn btn">онлайн-запись</button>
+          <button type="button" class="prices__btn btn" data-modal-open>онлайн-запись</button>
         </div>
       </section>
       <!-- Reasons section -->
@@ -515,7 +528,7 @@
       <!-- <div class="pre-footer">
         <div class="container container__pre-footer">
           <section class="online-appointment">
-            <h2 class="online-appointment__title section__title">Онлайн-запись</h2>
+            <h2 class="online-appointment__title section__title" data-modal-open>Онлайн-запись</h2>
             <form class="online-form">
               <div class="online-form__wrap">
                 <input
