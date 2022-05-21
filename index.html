@@ -17,7 +17,14 @@
     <header class="header">
       <div class="container header__container">
         <nav class="navigation">
-          <a href="" class="logo"><img src="./images/logo.svg" alt="логотип сайта" /></a>
+          <a href="" class="logo">
+						<picture>
+							<source srcset="./images/logo-white.svg" media="(max-width: 719px)" width="60"/>
+							<source srcset="./images/logo.svg"  media="(min-width: 720px)" width="60"/>
+							<img class="logo-img"
+						src="./images/logo.svg" alt="логотип сайта" /></picture>
+
+					</a>
           <ul class="nav-list">
             <li class="nav-list__item">
               <a href="" class="nav-list__link current">О нас</a>
@@ -47,7 +54,7 @@
           aria-expanded="false"
           data-menu-button
         >
-          <svg width="24" height="24">
+          <svg width="32" height="32">
             <use class="mobile-btn__burger" href="./images/icons.svg#icon-burger"></use>
             <use class="mobile-btn__close" href="./images/icons.svg#icon-modal-close"></use>
           </svg>
