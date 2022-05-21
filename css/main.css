@@ -488,7 +488,7 @@ img {
   top: 50%;
   left: 50%;
   width: 100%;
-  min-height: 500px;
+  max-height: 500px;
   background-color: #ffffff;
   border-radius: 10px;
   -webkit-transform: translate(-50%, -50%) rotate(0) scale(1);
@@ -498,6 +498,7 @@ img {
   transition: transform 500ms linear;
   transition: transform 500ms linear, -webkit-transform 500ms linear;
   padding: 40px;
+  overflow: auto;
 }
 @media screen and (min-width: 480px) {
   .modal {
@@ -507,6 +508,8 @@ img {
 @media screen and (min-width: 1200px) {
   .modal {
     width: 720px;
+    min-height: 500px;
+    max-height: none;
   }
 }
 .backdrop.is-hidden .modal {
@@ -516,8 +519,8 @@ img {
 
 .modal__close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 40px;
+  right: 40px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -804,6 +807,7 @@ img {
 }
 
 .header {
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -928,7 +932,7 @@ img {
 
 .mobile-btn {
   position: relative;
-  z-index: 9999;
+  z-index: 10;
   display: block;
   background-color: transparent;
   border: none;
