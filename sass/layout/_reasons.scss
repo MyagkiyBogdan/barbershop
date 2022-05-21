@@ -1,17 +1,38 @@
 .reasons-list {
   display: flex;
-  width: 370px;
   flex-wrap: wrap;
+  margin-top: 44px;
+  @include tab {
+    margin-top: 64px;
+    margin-left: auto;
+  }
+  @include desk {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  @media screen and (min-width: 380px) {
+    width: 370px;
+  }
 }
 
-.reasons-list__wrap,
+// .reasons-list__wrap,
+// .reasons-box {
+//   // width: calc((100%-30px) / 2);
+// }
+
 .reasons-box {
-  // width: calc((100%-30px) / 2);
+  @include tab {
+    max-width: 500px;
+  }
 }
 
 .reasons-list__item {
-  width: 170px;
+  width: 130px;
   height: 133px;
+  @media screen and (min-width: 380px) {
+    width: 170px;
+    height: 133px;
+  }
   background-color: #f7f7f7;
   padding: 20px 24px;
 

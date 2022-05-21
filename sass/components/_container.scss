@@ -33,16 +33,27 @@
 
 .container__reasons {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  @include desk {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
 }
 
 .container__pre-footer {
-  display: flex;
+  @include desk {
+    display: flex;
+  }
 }
 
 .container__footer {
-  display: flex;
-  align-items: center;
+  @include tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .mob-menu__container {

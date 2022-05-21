@@ -2,10 +2,6 @@
   background-color: #f7f7f7;
 }
 
-.footer-copy {
-  margin-left: 40px;
-}
-
 .footer-list {
   display: flex;
   margin-left: auto;
@@ -27,6 +23,9 @@
 }
 
 .footer__copy {
+  text-align: right;
+  padding-top: 30px;
+  margin-left: 40px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36px;
@@ -40,8 +39,11 @@
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: var(--first-text-color);
-  padding: 56px 0;
   display: block;
+  padding: 28px 0;
+  @include tab {
+    padding: 56px 0;
+  }
 
   &:hover,
   &:focus {

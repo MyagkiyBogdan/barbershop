@@ -125,19 +125,53 @@
         </div>
       </section>
       <!-- About section -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container about__container">
           <ul class="about-list">
             <li class="about-list__item">
-              <img
+							<picture>
+                <source
+                  srcset="
+                    ./images/about-1-desk-1x-min.jpg 1x,
+                    ./images/about-1-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/about-1-tablet-1x-min.jpg 1x,
+                    ./images/about-1-tablet-2x-min.jpg 2x
+                  "
+                  media="(min-width: 720px)"
+                />
+
+								<img
                 src="./images/img-about-1.jpg"
                 alt="Бритье бороды и шеи"
                 width="270"
                 height="445"
                 class="about__img"
               />
+              </picture>
+
             </li>
             <li class="about-list__item">
+														<picture>
+                <source
+                  srcset="
+                    ./images/about-2-desk-1x-min.jpg 1x,
+                    ./images/about-2-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/about-2-tablet-1x-min.jpg 1x,
+                    ./images/about-2-tablet-2x-min.jpg 2x
+                  "
+                  media="(min-width: 720px)"
+                />
+
               <img
                 src="./images/img-about-2.jpg"
                 alt="Бритье опасой бритвой головы"
@@ -145,11 +179,13 @@
                 height="445"
                 class="about__img"
               />
+              </picture>
+
             </li>
           </ul>
           <div class="about__description about-wrap">
             <p class="about-wrap__pre-title pre-title pre-title--dark">О НАС</p>
-            <h2 class="about-wrap__title section__title">Лучший Барбершоп твоего города</h2>
+            <h2 class="about-wrap__title section__title section__title--desk-about">Лучший Барбершоп твоего города</h2>
             <p class="about-wrap__after-title">
               Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
             </p>
@@ -162,7 +198,7 @@
             <button type="button" class="about__btn btn" data-modal-open>онлайн-запись</button>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Prices section -->
       <section class="section__prices section">
         <div class="container">
@@ -212,7 +248,7 @@
         </div>
       </section>
       <!-- Reasons section -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container container__reasons">
           <div class="reasons-list__wrap">
             <ul class="reasons-list">
@@ -245,7 +281,8 @@
             </p>
           </div>
         </div>
-      </section> -->
+      </section>
+			<!-- Masters section-->
       <section class="section__masters section" id="masters">
         <div class="container">
           <p class="masters__pre-title pre-title pre-title--dark">
@@ -532,7 +569,8 @@
           </ul>
         </div>
       </section>
-      <!-- <div class="pre-footer">
+<!--Pre footer section-->
+      <div class="pre-footer">
         <div class="container container__pre-footer">
           <section class="online-appointment">
             <h2 class="online-appointment__title section__title" data-modal-open >Онлайн-запись</h2>
@@ -560,6 +598,7 @@
           <section class="contacts">
             <div class="contacts__wrapper">
               <h2 class="contacts__title section__title">Контакты</h2>
+							<div class="contacts__tablet-wrapper">
               <address>
                 <ul class="contacts-list">
                   <li class="contacts-list__item">
@@ -584,14 +623,17 @@
                   </li>
                 </ul>
               </address>
+							<div class="contacts__time-wrapper">
               <h3 class="contacts__pre-title pre-title pre-title--light">время работы</h3>
               <p class="contacts__text">Ежедневно с 9:00 до 22:00</p>
+							</div>
+							</div>
             </div>
           </section>
         </div>
-      </div> -->
+      </div>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container container__footer">
         <p class="footer__copy">&copy; Copyright 2022</p>
         <ul class="footer-list">
@@ -603,7 +645,7 @@
           </li>
         </ul>
       </div>
-    </footer> -->
+    </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__close-btn" data-modal-close>
